@@ -11,7 +11,7 @@ Eigen::MatrixXi edges(const Eigen::MatrixXi &F)
 	Eigen::MatrixXi EBig(3*F.rows(), 2);
 	std::set<std::pair<int, int>> m;
 	int lostRows = 0;
-	std::pair<int, bool> p;
+	std::pair<int, int> p;
 	for (int i = 0; i < F.rows(); ++i) {
 		//E.block(i, 0, 1, 2) = F.block(i, 0, 1, 2);
 		p.first = F.row(i)(0);
